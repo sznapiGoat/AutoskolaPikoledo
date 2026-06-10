@@ -1,0 +1,15 @@
+
+> autoskola-pikoledo@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.127:3000
+✓ Ready in 1227ms
+
+○ Compiling / ...
+ GET / 200 in 5.4s (next.js: 4.5s, application-code: 980ms)
+ GET /kurzy 200 in 1001ms (next.js: 823ms, application-code: 178ms)
+ GET /o-nas 200 in 1110ms (next.js: 833ms, application-code: 277ms)
+ GET /terminy 200 in 961ms (next.js: 719ms, application-code: 243ms)
+ GET /kontakt 200 in 893ms (next.js: 725ms, application-code: 168ms)
