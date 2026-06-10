@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import { Logo } from "@/components/brand/logo";
 import { nav, site } from "@/lib/site";
 
 export function Navbar() {
@@ -33,14 +34,7 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand font-display text-base font-extrabold text-white">
-            P
-          </span>
-          <span className="font-display text-lg font-bold tracking-tight text-foreground">
-            Autoškola <span className="text-brand">Pikoledo</span>
-          </span>
-        </Link>
+        <Logo />
 
         <ul className="hidden items-center gap-1 md:flex">
           {nav.map((item) => {

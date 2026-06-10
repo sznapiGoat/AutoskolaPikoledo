@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Termíny",
   description:
-    "Termíny zahájení kurzů a rozvrh teoretické výuky Autoškoly Pikoledo v Ostravě. Nové kurzy otevíráme průběžně — ozvěte se a domluvíme termín.",
+    "Termíny zahájení kurzů a rozvrh teoretické výuky Autoškoly Pikoledo v Ostravě. Nové kurzy otevíráme průběžně. Ozvěte se a domluvíme termín.",
 };
 
 const startDates = [
@@ -19,9 +19,9 @@ const startDates = [
 ];
 
 const lessons = [
-  { day: "Pondělí", time: "16:00 – 18:00", topic: "Teorie — pravidla provozu" },
-  { day: "Středa", time: "16:00 – 18:00", topic: "Teorie — zásady bezpečné jízdy" },
-  { day: "Po domluvě", time: "Flexibilně", topic: "Praktické jízdy — i víkendy a večery" },
+  { day: "Pondělí", time: "16:00 – 18:00", topic: "Teorie: pravidla provozu" },
+  { day: "Středa", time: "16:00 – 18:00", topic: "Teorie: zásady bezpečné jízdy" },
+  { day: "Po domluvě", time: "Flexibilně", topic: "Praktické jízdy i o víkendech a večer" },
 ];
 
 export default function TerminyPage() {
@@ -30,7 +30,7 @@ export default function TerminyPage() {
       <PageHeader
         eyebrow="Termíny"
         title="Začít můžete prakticky hned."
-        subtitle="Nové kurzy otevíráme průběžně a jízdy plánujeme tak, aby seděly vám — včetně víkendů, svátků a večerů bez doplatků."
+        subtitle="Nové kurzy otevíráme průběžně a jízdy plánujeme tak, aby seděly vám. Včetně víkendů, svátků a večerů bez doplatků."
       />
 
       <section className="mx-auto max-w-6xl px-5 py-12">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/sections/page-header";
 import { Courses } from "@/components/sections/courses";
+import { Fleet } from "@/components/sections/fleet";
 import { PricingAkce } from "@/components/sections/pricing-akce";
 import { FinalCta } from "@/components/sections/final-cta";
 
@@ -19,6 +20,7 @@ export default function KurzyPage() {
         subtitle="Od kompletního kurzu sk. B přes intenzivní rychlokurz až po kondiční jízdy pro ty, kdo se chtějí vrátit za volant. Vše s jasnou cenou."
       />
       <Courses />
+      <Fleet />
       <PricingAkce />
       <FinalCta />
     </>

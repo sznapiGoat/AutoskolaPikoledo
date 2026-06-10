@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FbIcon } from "@/components/ui/fb-icon";
+import { Logo } from "@/components/brand/logo";
 import { nav, site } from "@/lib/site";
 
 export function Footer() {
@@ -8,12 +9,7 @@ export function Footer() {
     <footer className="mt-24 bg-brand-deep text-teal-50">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent font-display text-base font-extrabold text-slate-950">
-              P
-            </span>
-            <span className="font-display text-lg font-bold text-white">Autoškola Pikoledo</span>
-          </div>
+          <Logo dark />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-teal-100/80">
             Řidičák bez stresu v Ostravě. S trpělivostí, klidem a lidským přístupem, který ocení
             i ten, kdo se za volant teprve chystá.

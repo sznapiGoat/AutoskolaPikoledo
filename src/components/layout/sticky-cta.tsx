@@ -34,7 +34,7 @@ export function StickyCta() {
           </a>
           <Link
             href="/kontakt"
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-slate-950"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-background"
           >
             <FileText size={16} /> Přihláška
           </Link>

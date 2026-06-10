@@ -29,13 +29,12 @@ export function ReviewsMarquee() {
       <Reveal className="mx-auto max-w-6xl px-5">
         <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <span className="text-sm font-semibold uppercase tracking-wider text-accent">Recenze</span>
+            <span className="rule text-sm font-semibold uppercase tracking-[0.2em] text-accent">Recenze</span>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Recenze, které jsme si nevymysleli.
+              Co o nás říkají naši absolventi.
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              Napsali je lidé, co u nás opravdu dýchli za volantem. Najedete na kartu a marquee se
-              zastaví — v klidu si počtěte.
+              Skutečné recenze lidí, kteří u nás získali řidičák. Přečtěte si je v klidu, žádný spěch.
             </p>
           </div>
           <div className="flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-sm ring-1 ring-stone-200">

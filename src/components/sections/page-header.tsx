@@ -12,15 +12,15 @@ export function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
   return (
     <section className="relative overflow-hidden pt-32 pb-12 sm:pt-40 sm:pb-16">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 right-[-8%] h-80 w-80 rounded-full bg-brand/10 blur-3xl" />
-        <div className="absolute -bottom-10 left-[-8%] h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute -top-24 right-[-8%] h-80 w-80 rounded-full bg-accent/[0.06] blur-3xl" />
       </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-px bg-stone-200" />
       <div className="mx-auto max-w-6xl px-5">
         <motion.span
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-sm font-semibold uppercase tracking-wider text-accent"
+          className="rule text-sm font-semibold uppercase tracking-[0.2em] text-accent"
         >
           {eyebrow}
         </motion.span>

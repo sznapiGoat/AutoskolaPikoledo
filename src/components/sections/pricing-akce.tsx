@@ -15,8 +15,8 @@ export function PricingAkce() {
           Férová cena. Žádná překvapení.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-slate-600">
-          Kompletní a transparentní ceník. Sledujte náš Facebook — sezónní akce (Vánoční, Májová)
-          dokážou ušetřit pěkných pár korun.
+          Kompletní a transparentní ceník. Na Facebooku navíc průběžně vyhlašujeme sezónní akce
+          (Vánoční, Májová), na kterých ušetříte pěkných pár korun.
         </p>
       </Reveal>
 

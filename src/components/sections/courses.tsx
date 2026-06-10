@@ -13,7 +13,7 @@ export function Courses() {
     <section className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
       <Reveal className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
         <div className="max-w-2xl">
-          <span className="text-sm font-semibold uppercase tracking-wider text-accent">Kurzy</span>
+          <span className="rule text-sm font-semibold uppercase tracking-[0.2em] text-accent">Kurzy</span>
           <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
             Vyberte si, jak chcete jezdit.
           </h2>

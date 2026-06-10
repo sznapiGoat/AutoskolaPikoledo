@@ -19,7 +19,7 @@ const pillars = [
   {
     icon: CalendarClock,
     title: "Termíny podle vás",
-    text: "Žádné dlouhé pauzy mezi jízdami. Plánujeme tak, aby to sedlo vám — i o víkendu, svátcích a večer bez doplatků.",
+    text: "Žádné dlouhé pauzy mezi jízdami. Plánujeme tak, aby to sedlo vám. I o víkendech, svátcích a večer bez doplatků.",
   },
 ];
 
@@ -27,7 +27,7 @@ export function WhyPikoledo() {
   return (
     <section className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
       <Reveal className="max-w-2xl">
-        <span className="text-sm font-semibold uppercase tracking-wider text-accent">Proč Pikoledo</span>
+        <span className="rule text-sm font-semibold uppercase tracking-[0.2em] text-accent">Proč Pikoledo</span>
         <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
           Strach za volantem? U nás z něj děláme klid.
         </h2>

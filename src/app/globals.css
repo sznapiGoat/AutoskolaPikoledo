@@ -1,14 +1,52 @@
 @import "tailwindcss";
 
+/* Fonts (runtime CSS vars from next/font) */
 @theme inline {
   --font-sans: var(--font-inter);
-  --font-display: var(--font-sora);
+  --font-display: var(--font-fraunces);
+}
 
-  --color-background: #fafaf9; /* stone-50 */
-  --color-foreground: #0f172a; /* slate-900 */
-  --color-brand: #115e59; /* teal-800 */
-  --color-brand-deep: #134e4a; /* teal-900 */
-  --color-accent: #f59e0b; /* amber-500 */
+/*
+  Warm editorial design system.
+  Paper + ink + a single restrained terracotta accent.
+  We override Tailwind's default color families so the whole site
+  re-skins from this one file.
+*/
+@theme {
+  --color-background: #f4f1ea; /* warm paper */
+  --color-foreground: #1f1c16; /* ink */
+  --color-brand: #2b271f; /* espresso (dark sections / primary) */
+  --color-brand-deep: #1c1913; /* near-black */
+  --color-accent: #a0492e; /* terracotta (site UI accent) */
+  --color-pine: #2f5b4c; /* deep green — brand logo only */
+
+  /* Warm neutral scale (used via slate-* utilities) */
+  --color-slate-400: #a59d8e;
+  --color-slate-500: #837b6d;
+  --color-slate-600: #5f594e;
+  --color-slate-700: #443f37;
+  --color-slate-900: #2a261e;
+  --color-slate-950: #1c1913;
+
+  /* Paper tones (stone-* utilities) */
+  --color-stone-50: #f4f1ea;
+  --color-stone-100: #ebe5d9;
+  --color-stone-200: #ddd5c6;
+
+  /* Dark/espresso tones (teal-* utilities, kept name for low churn) */
+  --color-teal-50: #efe9dd;
+  --color-teal-100: #ddd3c1;
+  --color-teal-200: #c5b8a1;
+  --color-teal-700: #3a342a;
+  --color-teal-800: #2b271f;
+  --color-teal-900: #1c1913;
+
+  /* Accent tones (amber-* utilities) */
+  --color-amber-400: #b65f41;
+  --color-amber-500: #a0492e;
+
+  /* Quiet success (rarely used) */
+  --color-emerald-600: #6f7257;
 }
 
 html {
@@ -23,11 +61,38 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Serif display: editorial, premium */
 .font-display {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-family: var(--font-display), Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
 }
 
-/* Edge-fade mask for the infinite reviews marquee */
+/* Subtle paper grain over the whole page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* Thin editorial rule used before eyebrow labels */
+.rule::before {
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+/* Edge-fade mask for the infinite marquees */
 .marquee-mask {
   -webkit-mask-image: linear-gradient(
     to right,

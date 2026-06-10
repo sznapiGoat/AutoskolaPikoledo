@@ -23,7 +23,7 @@ export function CourseCard({ course }: { course: Course }) {
       {course.badge && (
         <span
           className={`absolute -top-3 left-7 rounded-full px-3 py-1 text-xs font-semibold shadow ${
-            course.highlight ? "bg-accent text-slate-950" : "bg-brand text-white"
+            course.highlight ? "bg-accent text-background" : "bg-brand text-white"
           }`}
         >
           {course.badge}
@@ -60,7 +60,7 @@ export function CourseCard({ course }: { course: Course }) {
         href="/kontakt"
         className={`mt-7 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-colors ${
           course.highlight
-            ? "bg-accent text-slate-950 hover:bg-amber-400"
+            ? "bg-accent text-background hover:bg-amber-400"
             : "bg-brand text-white hover:bg-brand-deep"
         }`}
       >

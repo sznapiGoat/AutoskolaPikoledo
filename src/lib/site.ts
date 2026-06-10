@@ -24,7 +24,7 @@ export const nav = [
 ] as const;
 
 export const stats = [
-  { value: 4.9, suffix: "★", label: "Průměrné hodnocení na Google", decimals: 1 },
+  { value: 4.9, suffix: "/5", label: "Průměrné hodnocení na Google", decimals: 1 },
   { value: 1200, suffix: "+", label: "Vyškolených řidičů", decimals: 0 },
   { value: 95, suffix: "%", label: "Úspěšnost u zkoušek", decimals: 0 },
   { value: 30, suffix: " let", label: "Zkušeností za volantem", decimals: 0 },

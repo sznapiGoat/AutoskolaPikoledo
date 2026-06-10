@@ -37,13 +37,13 @@ export default function KontaktPage() {
               <ContactRow
                 icon={FbIcon}
                 label="Facebook"
-                value="@pikoledo — sledujte sezónní akce"
+                value="@pikoledo, sezónní akce a novinky"
                 href={site.facebook}
               />
 
               <div className="overflow-hidden rounded-3xl ring-1 ring-stone-200">
                 <iframe
-                  title="Mapa — Autoškola Pikoledo"
+                  title="Mapa: Autoškola Pikoledo"
                   src={mapsSrc}
                   className="h-72 w-full border-0"
                   loading="lazy"

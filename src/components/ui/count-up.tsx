@@ -32,7 +32,7 @@ export function CountUp({
       ease: [0.22, 1, 0.36, 1],
       onUpdate: (latest) => {
         if (ref.current) {
-          ref.current.textContent = `${prefix}${latest.toFixed(decimals)}${suffix}`;
+          ref.current.textContent = `${prefix}${latest.toFixed(decimals).replace(".", ",")}${suffix}`;
         }
       },
     });
@@ -41,7 +41,7 @@ export function CountUp({
 
   return (
     <span ref={ref} className={className}>
-      {`${prefix}${(0).toFixed(decimals)}${suffix}`}
+      {`${prefix}${(0).toFixed(decimals).replace(".", ",")}${suffix}`}
     </span>
   );
 }
