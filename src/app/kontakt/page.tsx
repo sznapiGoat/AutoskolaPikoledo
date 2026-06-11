@@ -57,7 +57,7 @@ export default function KontaktPage() {
           <Reveal delay={0.1}>
             <div>
               <h2 className="font-display text-xl font-bold text-foreground">Online přihláška</h2>
-              <p className="mt-1.5 text-sm text-slate-500">
+              <p className="mt-1.5 text-base text-slate-500">
                 Nezávazně. Po odeslání se vám ozveme a vše v klidu probereme.
               </p>
               <div className="mt-5">

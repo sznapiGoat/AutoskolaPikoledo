@@ -51,7 +51,7 @@ export default function ONasPage() {
                   <Icon size={24} />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-bold text-foreground">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p>
+                <p className="mt-2 text-base leading-relaxed text-slate-600">{text}</p>
               </div>
             </Reveal>
           ))}

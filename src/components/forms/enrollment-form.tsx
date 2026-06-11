@@ -24,7 +24,7 @@ export function EnrollmentForm() {
       >
         <CheckCircle2 size={48} className="text-brand" />
         <h3 className="mt-4 font-display text-xl font-bold">Děkujeme, ozveme se vám!</h3>
-        <p className="mt-2 max-w-sm text-sm text-slate-500">
+        <p className="mt-2 max-w-sm text-base text-slate-500">
           Vaši poptávku jsme přijali. Obvykle se ozýváme do 24 hodin. Těšíme se na vás za volantem.
         </p>
       </motion.div>
@@ -66,7 +66,7 @@ export function EnrollmentForm() {
       </div>
 
       <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
-        <p className="text-xs text-slate-400">
+        <p className="text-sm text-slate-400">
           Odesláním souhlasíte se zpracováním údajů za účelem kontaktování.
         </p>
         <MagneticButton type="submit">

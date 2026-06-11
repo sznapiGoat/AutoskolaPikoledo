@@ -19,7 +19,7 @@ export function InstructorCard({ instructor }: { instructor: Instructor }) {
       </div>
       <h3 className="mt-4 font-display text-lg font-bold text-foreground">{instructor.name}</h3>
       <p className="mt-0.5 text-sm font-medium text-accent">{instructor.role}</p>
-      <p className="mt-3 text-sm leading-relaxed text-slate-500">{instructor.bio}</p>
+      <p className="mt-3 text-base leading-relaxed text-slate-500">{instructor.bio}</p>
     </motion.article>
   );
 }

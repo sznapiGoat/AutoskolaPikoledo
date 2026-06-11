@@ -84,7 +84,7 @@ export default function TerminyPage() {
 
         <Reveal className="mt-8">
           <div className="flex flex-col items-center justify-between gap-4 rounded-3xl border border-dashed border-brand/30 bg-brand/5 px-6 py-6 text-center sm:flex-row sm:text-left">
-            <p className="text-sm text-slate-600">
+            <p className="text-base text-slate-600">
               <span className="font-semibold text-foreground">Konkrétní termín si rádi domluvíme telefonicky.</span>{" "}
               Zavolejte nebo nám napište a najdeme čas, který sedne přesně vám.
             </p>

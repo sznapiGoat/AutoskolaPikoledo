@@ -40,7 +40,7 @@ export function Logo({ dark = false, className }: { dark?: boolean; className?: 
           Pikoledo
         </span>
         <span
-          className={`mt-[3px] text-[0.62rem] font-medium uppercase tracking-[0.34em] ${
+          className={`mt-[3px] text-[0.72rem] font-medium uppercase tracking-[0.3em] ${
             dark ? "text-teal-100/70" : "text-pine/80"
           }`}
         >

@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { StickyCta } from "@/components/layout/sticky-cta";
+import { MotionProvider } from "@/components/motion/motion-provider";
+import { site } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,12 +35,76 @@ export const metadata: Metadata = {
     "rychlokurz autoškola",
     "kondiční jízdy Ostrava",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
   openGraph: {
     title: "Autoškola Pikoledo Ostrava · řidičák bez stresu",
     description:
       "Trpěliví instruktoři, klidný přístup a hodnocení 4,9 na Google. Kurz sk. B, rychlokurz i kondiční jízdy v Ostravě-Zábřehu.",
     locale: "cs_CZ",
     type: "website",
+    siteName: "Autoškola Pikoledo",
+    images: [
+      {
+        url: "/images/pikoledo12.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vůz autoškoly Pikoledo – červená Škoda Scala",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Autoškola Pikoledo Ostrava · řidičák bez stresu",
+    description:
+      "Trpěliví instruktoři, klidný přístup a hodnocení 4,9 na Google. Kurz sk. B v Ostravě-Zábřehu.",
+    images: ["/images/pikoledo12.jpg"],
+  },
+};
+
+// LocalBusiness (DrivingSchool) structured data — fed from the single
+// source of truth in src/lib/site.ts.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DrivingSchool",
+  name: site.name,
+  description:
+    "Autoškola v Ostravě-Zábřehu. Trpěliví instruktoři, klidný přístup a hodnocení 4,9 na Google. Kurz sk. B, rychlokurz i kondiční jízdy.",
+  url: "https://www.autoskolapikoledo.cz",
+  image: "https://www.autoskolapikoledo.cz/images/pikoledo12.jpg",
+  telephone: site.phone,
+  email: site.email,
+  priceRange: "18 500–21 000 Kč",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ruská 3077/135",
+    addressLocality: "Ostrava-Zábřeh",
+    postalCode: "700 30",
+    addressCountry: "CZ",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 49.7935,
+    longitude: 18.2483,
+  },
+  areaServed: { "@type": "City", name: "Ostrava" },
+  sameAs: [site.facebook],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: site.rating,
+    reviewCount: site.reviewsCount,
+    bestRating: 5,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    description: "Po–Pá dle domluvy, jízdy i o víkendu",
   },
 };
 
@@ -48,10 +114,16 @@ export default function RootLayout({
   return (
     <html lang="cs" className={`${inter.variable} ${fraunces.variable} h-full`}>
       <body className="flex min-h-full flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <StickyCta />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <MotionProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <StickyCta />
+        </MotionProvider>
       </body>
     </html>
   );
