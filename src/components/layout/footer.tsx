@@ -69,8 +69,8 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs text-teal-100/60 sm:flex-row">
-          <span>© {new Date().getFullYear()} Autoškola Pikoledo · {site.owner}</span>
-          <span>Ostrava-Zábřeh · IČO na vyžádání</span>
+          <span>© {new Date().getFullYear()} Autoškola Pikoledo, {site.owner}</span>
+          <span>Ostrava-Zábřeh, IČO na vyžádání</span>
         </div>
       </div>
     </footer>

@@ -25,7 +25,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand"
           >
-            <MapPin size={13} /> Autoškola Ostrava-Zábřeh · skupina B
+            <MapPin size={13} /> Autoškola Ostrava-Zábřeh, skupina B
           </motion.span>
 
           <h1 className="mt-6 max-w-2xl font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl">

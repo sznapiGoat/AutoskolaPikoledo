@@ -33,7 +33,7 @@ export default function KontaktPage() {
               <ContactRow icon={Phone} label="Telefon" value={site.phone} href={site.phoneHref} accent />
               <ContactRow icon={Mail} label="E-mail" value={site.email} href={site.emailHref} />
               <ContactRow icon={MapPin} label="Adresa" value={site.address} />
-              <ContactRow icon={Clock} label="Otevřeno" value="Po–Pá dle domluvy · jízdy i o víkendu" />
+              <ContactRow icon={Clock} label="Otevřeno" value="Po–Pá dle domluvy, jízdy i o víkendu" />
               <ContactRow
                 icon={FbIcon}
                 label="Facebook"

@@ -20,7 +20,7 @@ export function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rule text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+          className="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
         >
           {eyebrow}
         </motion.span>

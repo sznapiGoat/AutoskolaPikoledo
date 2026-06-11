@@ -1,23 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect } from "react";
-import { motion, useAnimationControls } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
 import { graduates } from "@/lib/gallery";
 
-const loop = {
-  x: ["0%", "-50%"],
-  transition: { duration: 50, ease: "linear" as const, repeat: Infinity },
-};
-
 export function Graduates() {
-  const controls = useAnimationControls();
-
-  useEffect(() => {
-    controls.start(loop);
-  }, [controls]);
-
   return (
     <section className="overflow-hidden py-20 sm:py-28">
       <Reveal className="mx-auto max-w-6xl px-5 text-center">
@@ -30,12 +17,11 @@ export function Graduates() {
         </p>
       </Reveal>
 
-      <div
-        className="marquee-mask mt-12"
-        onMouseEnter={() => controls.stop()}
-        onMouseLeave={() => controls.start(loop)}
-      >
-        <motion.div animate={controls} className="flex w-max gap-5 px-5">
+      <div className="marquee-mask mt-12">
+        <div
+          className="animate-marquee flex w-max gap-5 px-5"
+          style={{ ["--marquee-duration" as string]: "50s" }}
+        >
           {[...graduates, ...graduates].map((photo, i) => (
             <figure
               key={`${photo.src}-${i}`}
@@ -51,7 +37,7 @@ export function Graduates() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/40 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-30" />
             </figure>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

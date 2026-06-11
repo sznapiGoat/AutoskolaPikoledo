@@ -36,11 +36,25 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5">
         <Logo />
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <motion.ul
+          className="hidden items-center gap-1 md:flex"
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.06, delayChildren: 0.35 } },
+          }}
+        >
           {nav.map((item) => {
             const active = pathname === item.href;
             return (
-              <li key={item.href}>
+              <motion.li
+                key={item.href}
+                variants={{
+                  hidden: { opacity: 0, y: -8 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
+                }}
+              >
                 <Link
                   href={item.href}
                   className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
@@ -55,19 +69,24 @@ export function Navbar() {
                     />
                   )}
                 </Link>
-              </li>
+              </motion.li>
             );
           })}
-        </ul>
+        </motion.ul>
 
         <div className="flex items-center gap-2">
-          <a
+          <motion.a
             href={site.phoneHref}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
             className="hidden items-center gap-2 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-deep sm:inline-flex"
           >
             <Phone size={15} />
             {site.phone}
-          </a>
+          </motion.a>
           <button
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ring-stone-200 md:hidden"

@@ -82,16 +82,17 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
-/* Thin editorial rule used before eyebrow labels */
-.rule::before {
-  content: "";
-  display: inline-block;
-  width: 1.75rem;
-  height: 1px;
-  margin-right: 0.75rem;
-  vertical-align: middle;
-  background: currentColor;
-  opacity: 0.6;
+/* Infinite marquee — CSS-driven so it scrolls smoothly and never
+   snaps back on pointer interaction. The track duplicates its content,
+   so translating by -50% lands exactly one copy onward (seamless). */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 45s) linear infinite;
+  will-change: transform;
 }
 
 /* Edge-fade mask for the infinite marquees */
