@@ -7,10 +7,11 @@ import { Graduates } from "@/components/sections/graduates";
 import { Fleet } from "@/components/sections/fleet";
 import { Instructors } from "@/components/sections/instructors";
 import { FinalCta } from "@/components/sections/final-cta";
+import { ScrollRoad } from "@/components/motion/scroll-road";
 
 export default function HomePage() {
   return (
-    <>
+    <ScrollRoad>
       <Hero />
       <TrustStrip />
       <WhyPikoledo />
@@ -20,6 +21,6 @@ export default function HomePage() {
       <Graduates />
       <Instructors />
       <FinalCta />
-    </>
+    </ScrollRoad>
   );
 }

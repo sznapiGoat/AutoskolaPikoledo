@@ -19,9 +19,11 @@ export const graduates: Photo[] = [
   { src: "/images/pikoledo7.jpg", alt: "Absolvent ukazuje na logo vozu autoškoly Pikoledo" },
 ];
 
-/** Vozový park – krásné snímky vozů autoškoly. */
+/** Vozový park – krásné snímky vozů autoškoly (červená Scala i bílá Fabia). */
 export const fleet: Photo[] = [
   { src: "/images/pikoledo12.jpg", alt: "Červená Škoda Scala autoškoly Pikoledo zepředu" },
   { src: "/images/pikoledo13.jpg", alt: "Červená Škoda Scala autoškoly Pikoledo" },
   { src: "/images/pikoledo11.jpg", alt: "Červená Škoda Scala autoškoly Pikoledo z boku" },
+  { src: "/images/pikoledo2.jpg", alt: "Bílá Škoda Fabia combi autoškoly Pikoledo z boku" },
+  { src: "/images/pikoledo8.jpg", alt: "Bílá Škoda Fabia combi autoškoly Pikoledo zezadu" },
 ];
