@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { nav, site } from "@/lib/site";
@@ -12,6 +12,14 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  // Reading-progress bar: tracks how far down the page you've scrolled.
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -129,6 +137,13 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Reading-progress indicator along the bottom edge of the header. */}
+      <motion.div
+        style={{ scaleX: progress }}
+        className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-accent"
+        aria-hidden
+      />
     </motion.header>
   );
 }

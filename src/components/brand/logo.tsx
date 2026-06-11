@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const TRI =
   "M341.789 333.872C342.586 333.781 343.375 333.72 344.175 333.678C347.756 333.488 352.866 333.742 355.6 336.293C364.313 344.428 393.908 398.905 401.489 411.799L424.366 450.509C431.081 461.909 453.479 490.737 426.753 498.512C421.124 500.149 406.107 499.358 399.382 499.36L353.438 499.331C341.813 499.345 274.459 500.864 266.871 498.334C262.475 496.868 258.316 493.482 256.332 489.251C254.561 485.474 254.641 481.171 256.038 477.297C258.378 470.809 262.573 464.551 266.03 458.593C271.426 449.361 276.766 440.096 282.049 430.798C293.193 410.527 304.525 390.359 316.043 370.298C321.643 360.362 327.369 349.806 333.419 340.131C335.29 337.137 338.692 335.35 341.789 333.872Z";
@@ -20,9 +23,20 @@ export function LogoMark({ className }: { className?: string }) {
 
 /** Full logo lockup. Wordmark uses the site's Fraunces serif for cohesion. */
 export function Logo({ dark = false, className }: { dark?: boolean; className?: string }) {
+  const pathname = usePathname();
+
+  function handleClick(e: React.MouseEvent) {
+    // Already on the homepage → don't re-navigate, just glide to the top.
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   return (
     <Link
       href="/"
+      onClick={handleClick}
       aria-label="Autoškola Pikoledo – úvod"
       className={`group flex items-center gap-2.5 ${className ?? ""}`}
     >
